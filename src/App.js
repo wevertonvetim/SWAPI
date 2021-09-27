@@ -1,34 +1,26 @@
 import React from 'react';
-import { Button } from '@material-ui/core';
 
-import logo from './logo.svg';
-import './App.css';
+import './components/Card/Card';
+import './css/App.css';
+import './css/index.css';
 
 function App() {
-  const buttonClick = () => {
-    console.log('click');
-  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <Button variant="contained" color="primary" onClick={buttonClick}>
-          Click-me
-        </Button>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className="app">
+      <header>
+        <NavBar />
+        <Card />
       </header>
     </div>
   );
 }
 
 export default App;
+
+/* import { Button } from '@material-ui/core';
+const buttonClick = () => {
+  console.log('click');
+};
+<Button variant="contained" color="primary" onClick={buttonClick}>
+Click-me
+</Button> */
