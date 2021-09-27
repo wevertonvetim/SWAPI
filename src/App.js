@@ -1,8 +1,7 @@
 import React from 'react';
 
-import './components/Card/Card';
-import './css/App.css';
-import './css/index.css';
+import Card from './components/Card';
+import NavBar from './components/NavBar';
 
 function App() {
   return (
@@ -16,11 +15,3 @@ function App() {
 }
 
 export default App;
-
-/* import { Button } from '@material-ui/core';
-const buttonClick = () => {
-  console.log('click');
-};
-<Button variant="contained" color="primary" onClick={buttonClick}>
-Click-me
-</Button> */
