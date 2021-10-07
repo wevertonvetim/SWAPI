@@ -1,7 +1,7 @@
 import React from 'react';
 import './estilo.css';
 
-function NavBar(props) {
+function NavBar({ fazFetch }) {
   return (
     <header className="cabecalhoPrincipal">
       <div className="container__nav">
@@ -10,42 +10,42 @@ function NavBar(props) {
           <button
             className="cabecalhoPrincipal__nav__link"
             type="button"
-            onClick={props.fazFetch('https://swapi.dev/api/people/')}
+            onClick={() => fazFetch('https://swapi.dev/api/people/')}
           >
             people
           </button>
           <button
             className="cabecalhoPrincipal__nav__link"
             type="button"
-            onClick={props.fazFetch('https://swapi.dev/api/starships/')}
+            onClick={() => fazFetch('https://swapi.dev/api/starships/')}
           >
             starships
           </button>
           <button
             className="cabecalhoPrincipal__nav__link"
             type="button"
-            onClick={props.fazFetch('https://swapi.dev/api/planets/')}
+            onClick={() => fazFetch('https://swapi.dev/api/planets/')}
           >
             planets
           </button>
           <button
             className="cabecalhoPrincipal__nav__link"
             type="button"
-            onClick={props.fazFetch('https://swapi.dev/api/species/')}
+            onClick={() => fazFetch('https://swapi.dev/api/species/')}
           >
             species
           </button>
           <button
             className="cabecalhoPrincipal__nav__link"
             type="button"
-            onClick={props.fazFetch('https://swapi.dev/api/films/')}
+            onClick={() => fazFetch('https://swapi.dev/api/films/')}
           >
             films
           </button>
           <button
             className="cabecalhoPrincipal__nav__link"
             type="button"
-            onClick={props.fazFetch('https://swapi.dev/api/vehicles/')}
+            onClick={() => fazFetch('https://swapi.dev/api/vehicles/')}
           >
             vehicles
           </button>
