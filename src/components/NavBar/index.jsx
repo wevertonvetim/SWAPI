@@ -1,19 +1,56 @@
 import React from 'react';
 import './estilo.css';
 
-function NavBar() {
+function NavBar(props) {
   return (
-    <header className="cabecalho">
-      <div className="cabecalho__titulo">
-        <img className="cabecalho__icone" alt="header-icon" />
-        <h3 className="cabecalho__titulo">VSWAPI</h3>
+    <header className="cabecalhoPrincipal">
+      <div className="container__nav">
+        <h1 className="cabecalhoPrincipal__titulo">SWAPI</h1>
+        <nav className="cabecalhoPrincipal__nav">
+          <button
+            className="cabecalhoPrincipal__nav__link"
+            type="button"
+            onClick={props.fazFetch('https://swapi.dev/api/people/')}
+          >
+            people
+          </button>
+          <button
+            className="cabecalhoPrincipal__nav__link"
+            type="button"
+            onClick={props.fazFetch('https://swapi.dev/api/starships/')}
+          >
+            starships
+          </button>
+          <button
+            className="cabecalhoPrincipal__nav__link"
+            type="button"
+            onClick={props.fazFetch('https://swapi.dev/api/planets/')}
+          >
+            planets
+          </button>
+          <button
+            className="cabecalhoPrincipal__nav__link"
+            type="button"
+            onClick={props.fazFetch('https://swapi.dev/api/species/')}
+          >
+            species
+          </button>
+          <button
+            className="cabecalhoPrincipal__nav__link"
+            type="button"
+            onClick={props.fazFetch('https://swapi.dev/api/films/')}
+          >
+            films
+          </button>
+          <button
+            className="cabecalhoPrincipal__nav__link"
+            type="button"
+            onClick={props.fazFetch('https://swapi.dev/api/vehicles/')}
+          >
+            vehicles
+          </button>
+        </nav>
       </div>
-      <nav>
-        {/* TODO: Add links */}
-        <a href="foo">personagem</a>
-        <a href="foo">nave</a>
-        <a href="foo">planeta</a>
-      </nav>
     </header>
   );
 }

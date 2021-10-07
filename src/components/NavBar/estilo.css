@@ -1,0 +1,38 @@
+.container__nav {
+  display: flex;
+  border-bottom: 1px solid #9799a6;
+  justify-content: space-between;
+  width: 94%;
+  margin: 0 auto;
+}
+
+.cabecalhoPrincipal {
+  background-color: #fff;
+  padding: 20px 0;
+}
+
+.cabecalhoPrincipal__titulo {
+  font-weight: bold;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.cabecalhoPrincipal__titulo a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.cabecalhoPrincipal__nav{
+  display: flex;
+}
+
+.cabecalhoPrincipal__nav__link {
+  padding: 10px;
+  margin-bottom: 10px;
+  color: #9799a6;
+  border:none;
+  background-color: #fff;
+  text-decoration: none;
+  transition: 0.5s;
+  display: block;
+}
