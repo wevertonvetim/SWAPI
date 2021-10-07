@@ -2,15 +2,13 @@ import React from 'react';
 import Card from '../Card';
 import './estilo.css';
 
-function ListaDeNotas(props) {
+function ListaDeNotas({ notas }) {
   return (
-    <ul className="lista-notas">
-      {props.notas.map((nota, index) => (
-        <li className="lista-notas_item" key={index}>
-          <Card titulo={nota.titulo} texto={nota.texto} />
-        </li>
+    <div className="lista-notas">
+      {notas.map((nota) => (
+        <Card title={nota.titulo} infoText={nota.texto} name={nota.name} />
       ))}
-    </ul>
+    </div>
   );
 }
 
