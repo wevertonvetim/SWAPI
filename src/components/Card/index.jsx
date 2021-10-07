@@ -3,7 +3,7 @@ import './estilo.css';
 
 function Card({ title, name, infoText }) {
   return (
-    <header className="card-header">
+    <div className="card">
       <div className="card-display">
         <div className="titulo">
           <h3 className="card__titulo">{title}</h3>
@@ -13,7 +13,7 @@ function Card({ title, name, infoText }) {
           <p>{infoText}</p>
         </div>
       </div>
-    </header>
+    </div>
   );
 }
 
