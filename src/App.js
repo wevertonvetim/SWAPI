@@ -1,24 +1,23 @@
-import React, { useState } from 'react';
-
+import React from 'react';
+import { fetch } from 'node-fetch';
 import NavBar from './components/NavBar';
 
 function App() {
-  const [card, setCard] = useState([]);
-  const fazFetch = (url) => {
-    fetch(url)
-      .then((resp) => resp.json())
-      .then((data) => {
-        console.log(data);
-        setCard(data);
-        console.log(card);
-      })
-      .catch((error) => console.log(error));
+  const fetchInfo = async (url) => {
+    try {
+      const result = await fetch(url);
+      const response = await result.json();
+      console.log(result);
+      console.log(response);
+    } catch (error) {
+      console.log(`failed to fetch: ${error}`);
+    }
   };
 
   return (
     <div className="app">
       <header>
-        <NavBar fazFetch={fazFetch} />
+        <NavBar fazFetch={fetchInfo} />
       </header>
     </div>
   );
